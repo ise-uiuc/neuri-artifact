@@ -15,9 +15,9 @@ Welcome to the artifact repository of the NeuRI paper which is accepted by ESEC/
 
 ### PyTorch
 
-1. ✅💥🚨 https://github.com/pytorch/pytorch/issues/86535
-2. ✅🧮 https://github.com/pytorch/pytorch/issues/86556
-3. ✅💥🚨 https://github.com/pytorch/pytorch/issues/86664
+1. ✅💥🚨 [SIGIOT when running model with conv2d and avgpool2d after `optimize_for_inference` · Issue #86535 · pytorch/pytorch](https://github.com/pytorch/pytorch/issues/86535)
+2. ✅🧮 [`optimize_for_inference` leads to wrong results for model with conv2d, max and clip · Issue #86556 · pytorch/pytorch](https://github.com/pytorch/pytorch/issues/86556)
+3. ✅💥🚨 [RuntimeError: could not construct a memory descriptor using a format tag · Issue #86664 · pytorch/pytorch](https://github.com/pytorch/pytorch/issues/86664)
 
 ...
 
