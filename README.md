@@ -7,9 +7,9 @@
 
 Welcome to the artifact repository of the NeuRI paper which is accepted by ESEC/FSE 2023.
 
-## Bugs
+## Bugs (RQ3)
 
-> **Note:** Annotations
+> **Note** Annotations
 > * **Status**: ✅ fixed; 🚨 high-priority bug; 🔵 explicitly confirmed by developers; ❌ won't fix;
 > * **Symptom**: 💥 Crash or exception; 🧮 Result inconsistency (silent semantic bug); 🧴 Sanitizers;
 
@@ -79,10 +79,10 @@ Welcome to the artifact repository of the NeuRI paper which is accepted by ESEC/
 62. ✅🧮 [[pt2] `pow` + `cos` produces wrong result · Issue #98149 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/98149)
 63. ✅💥 [`torch._C._nn.fractional_max_pool3d` Trigger Segmentation Fault · Issue #89648 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89648)
 64. ✅💥🚨 [`torch.nn.functional.embedding_bag` Trigger &quot;IOT instruction&quot; Failure · Issue #89677 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89677)
-65. ✅💥 [`torch.Tensor.flatten` Trigger Segmentation Fault when trying to provide and output named dim · Issue #89718 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89718)
-66. ✅💥 [`torch._C._nn.fractional_max_pool3d` Trigger Segmentation Fault · Issue #89648 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89648)
-67. ✅💥🚨 [`torch.nn.functional.embedding_bag` Trigger &quot;IOT instruction&quot; Failure · Issue #89677 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89677)
-68. ✅💥 [`torch.Tensor.flatten` Trigger Segmentation Fault when trying to provide and output named dim · Issue #89718 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89718)
+65. 🔵💥 [`torch.Tensor.flatten` Trigger Segmentation Fault when trying to provide and output named dim · Issue #89718 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/89718)
+66. ✅🧴 [`torch.Tensor.index_select` Trigger heap-buffer-overflow with AddressSanitizer · Issue #88940 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88940)
+67. 🔵🧴 [`nn.functional.embedding_bag` Trigger out-of-bound Read under Compute Sanitizer · Issue #88563 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88563)
+68. ✅🧴 [`nn.utils.rnn.pack_sequence` Trigger heap-buffer-overflow with AddressSanitizer · Issue #88334 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88334)
 69. ✅🚨🧴 [`MultiMarginLoss` Trigger out-of-bound Read under Compute Sanitizer · Issue #88724 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88724)
 70. ✅🧴 [`nn.functional.max_unpool3d` Trigger heap-buffer-overflow with AddressSanitizer · Issue #88032 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88032)
 71. 🔵🧴 [`torch.nn.CTCLoss` Trigger heap-buffer-overflow under AddressSanitizer · Issue #88047 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88047)
@@ -100,9 +100,6 @@ Welcome to the artifact repository of the NeuRI paper which is accepted by ESEC/
 83. 🧴 [`torch.vander` Trigger RuntimeError with UndefinedBehaviorSanitizer · Issue #88943 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88943)
 84. 🔵🧴 [`torch.svd_lowrank` Trigger RuntimeError under UndefinedBehaviorSanitizer · Issue #88942 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88942)
 85. 🔵🧴 [`torch.linalg.lstsq` Trigger RuntimeError under UndefinedBehaviorSanitizer · Issue #88941 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88941)
-86. ✅🧴 [`torch.Tensor.index_select` Trigger heap-buffer-overflow with AddressSanitizer · Issue #88940 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88940)
-87. 🔵🧴 [`nn.functional.embedding_bag` Trigger out-of-bound Read under Compute Sanitizer · Issue #88563 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88563)
-88. ✅🧴 [`nn.utils.rnn.pack_sequence` Trigger heap-buffer-overflow with AddressSanitizer · Issue #88334 · pytorch/pytorch · GitHub](https://github.com/pytorch/pytorch/issues/88334)
 
 ### TensorFlow
 
@@ -121,6 +118,20 @@ Welcome to the artifact repository of the NeuRI paper which is accepted by ESEC/
 13. 🔵🧮 [LRN operator outputs wrong results with `jit_compile=True` · Issue #57746 · tensorflow/tensorflow · GitHub](https://github.com/tensorflow/tensorflow/issues/57746)
 14. 🔵💥 [Conv2D layer fails to run with XLA on CUDA · Issue #57838 · tensorflow/tensorflow · GitHub](https://github.com/tensorflow/tensorflow/issues/57838)
 15. 🔵🧴 [`tf.raw_ops.SegmentMax` Behaves Differently Under CPU and GPU · Issue #58469 · tensorflow/tensorflow · GitHub](https://github.com/tensorflow/tensorflow/issues/58469)
+
+> **Note**
+> NeuRI or NNSmith is able to find a lot more TensorFlow bugs in addition to these above.
+> Because we want to report bugs more [responsively](https://blog.regehr.org/archives/2037), we use a buffer size of 15 reports until some of them are fixed.
+> That being said, the 15 reported bugs are not fixed (though confirmed) by TensorFlow developers to date and we thus discontinue finding bugs over TensorFlow.
+
+## Evaluating Coverage (RQ2)
+
+> **Warning** TBD
+
+## Evaluating Rule Inference (RQ3)
+
+> **Warning** Experiment dependency.
+> You need to first finish the last section (RQ2) to continue this section.
 
 ## Learning More
 
